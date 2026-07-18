@@ -44,7 +44,7 @@ def plot_scene(scene: EELSScene, path: str | Path) -> None:
         path: Output image path.
     """
     k = scene.abundances.shape[0]
-    fig, axes = plt.subplots(1, k + 2, figsize=(3.1 * (k + 2), 3.0))
+    fig, axes = plt.subplots(1, k + 2, figsize=(3.4 * (k + 2), 3.0), layout="constrained")
     im = axes[0].imshow(scene.cube.sum(axis=2), cmap="gray")
     axes[0].set_title("total counts")
     fig.colorbar(im, ax=axes[0], fraction=0.046)
@@ -61,9 +61,7 @@ def plot_scene(scene: EELSScene, path: str | Path) -> None:
     axes[-1].set_ylabel("intensity (unit mean)")
     axes[-1].set_title("true endmembers")
     axes[-1].legend(fontsize=8)
-    fig.suptitle(
-        f"dose {scene.config.dose:g} counts/px, drift {scene.config.drift_channels:g} ch", y=1.02
-    )
+    fig.suptitle(f"dose {scene.config.dose:g} counts/px, drift {scene.config.drift_channels:g} ch")
     _save(fig, path)
 
 
@@ -82,7 +80,7 @@ def plot_hero(scene: EELSScene, decompositions: dict[str, Decomposition], path: 
     k = scene.endmembers.shape[0]
     n_rows = 2 + len(decompositions)
     fig = plt.figure(figsize=(3.4 * k, 2.7 * n_rows))
-    gs = fig.add_gridspec(n_rows, k, hspace=0.35, wspace=0.25)
+    gs = fig.add_gridspec(n_rows, k, hspace=0.45, wspace=0.25)
 
     matches = {
         name: match_endmembers(dec.spectra, scene.endmembers)
@@ -264,6 +262,7 @@ def plot_ae_epochs(payload: dict[str, Any], path: str | Path) -> None:
     fig, ax = plt.subplots(figsize=(7, 4.2))
     ax.plot(epochs, sad_mean, marker="o", color="#d55e00", label="spectral angle (mean)")
     ax.fill_between(epochs, sad_min, sad_max, color="#d55e00", alpha=0.2, label="seed range")
+    ax.set_ylim(min(sad_min) - 0.5, max(sad_max) + 0.5)
     ax.set_xscale("log")
     ax.set_xticks(epochs, [str(e) for e in epochs])
     ax.minorticks_off()
