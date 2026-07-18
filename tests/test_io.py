@@ -57,3 +57,17 @@ def test_load_cube_rejects_unknown_format(tmp_path):
     path.write_text("nope")
     with pytest.raises(ValueError, match="Unsupported"):
         load_cube(path)
+
+
+def test_load_scene_never_executes_stored_config(tmp_path):
+    # The config string inside a scene file is parsed with ast.literal_eval,
+    # so a tampered file raises instead of running code.
+    scene = simulate(SimConfig(nx=8, ny=8, n_channels=32, seed=0))
+    path = tmp_path / "scene.npz"
+    save_scene(scene, path)
+    with np.load(path, allow_pickle=False) as data:
+        arrays = {k: data[k] for k in data.files}
+    arrays["config"] = np.array(["__import__('os').getcwd()"])
+    np.savez_compressed(path, **arrays)
+    with pytest.raises(ValueError):
+        load_scene(path)

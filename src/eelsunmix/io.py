@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import ast
 from dataclasses import asdict
 from pathlib import Path
 
@@ -46,7 +47,7 @@ def load_scene(path: str | Path) -> EELSScene:
     """
     with np.load(path, allow_pickle=False) as data:
         config_repr = str(data["config"][0])
-        config = SimConfig(**eval(config_repr, {"__builtins__": {}}, {}))
+        config = SimConfig(**ast.literal_eval(config_repr))
         return EELSScene(
             cube=data["cube"].astype(np.float64),
             energy_ev=data["energy_ev"].astype(np.float64),
