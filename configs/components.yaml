@@ -1,0 +1,15 @@
+# Component-number analysis: fit k = 2..6 with the true k = 3 known.
+# Reports the PCA scree, each method's reconstruction error versus k
+# (the selection signal available without ground truth), and matched
+# spectral angles versus k (the diagnosis only simulation can provide).
+name: components
+mode: components
+seeds: [0]
+k_values: [2, 3, 4, 5, 6]
+scree_kmax: 10
+scene:
+  dose: 1000
+methods:
+  - { name: pca, kind: pca }
+  - { name: nmf, kind: nmf, init: nndsvda }
+  - { name: ae, kind: ae, epochs: 1200 }

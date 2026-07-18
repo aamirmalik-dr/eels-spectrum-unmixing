@@ -1,0 +1,59 @@
+{
+ "name": "fair_tuning",
+ "records": [
+  {
+   "dose": 200,
+   "variant": "frobenius_cd_1000",
+   "n_iter": 818,
+   "sad_mean_deg": 17.7833,
+   "abundance_rmse": 0.2627,
+   "subspace_error_deg": 33.522,
+   "n_matched": 3
+  },
+  {
+   "dose": 200,
+   "variant": "frobenius_cd_4000",
+   "n_iter": 818,
+   "sad_mean_deg": 17.7833,
+   "abundance_rmse": 0.2627,
+   "subspace_error_deg": 33.522,
+   "n_matched": 3
+  },
+  {
+   "dose": 200,
+   "variant": "kl_mu_3000",
+   "n_iter": 250,
+   "sad_mean_deg": 19.9328,
+   "abundance_rmse": 0.30535,
+   "subspace_error_deg": 31.4639,
+   "n_matched": 3
+  },
+  {
+   "dose": 1000,
+   "variant": "frobenius_cd_1000",
+   "n_iter": 444,
+   "sad_mean_deg": 14.3392,
+   "abundance_rmse": 0.1818,
+   "subspace_error_deg": 31.8311,
+   "n_matched": 3
+  },
+  {
+   "dose": 1000,
+   "variant": "frobenius_cd_4000",
+   "n_iter": 444,
+   "sad_mean_deg": 14.3392,
+   "abundance_rmse": 0.1818,
+   "subspace_error_deg": 31.8311,
+   "n_matched": 3
+  },
+  {
+   "dose": 1000,
+   "variant": "kl_mu_3000",
+   "n_iter": 250,
+   "sad_mean_deg": 16.768,
+   "abundance_rmse": 0.27338,
+   "subspace_error_deg": 30.2495,
+   "n_matched": 3
+  }
+ ]
+}

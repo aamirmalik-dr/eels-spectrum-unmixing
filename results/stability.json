@@ -1,0 +1,526 @@
+{
+ "name": "stability",
+ "mode": "stability",
+ "config": {
+  "name": "stability",
+  "mode": "stability",
+  "scene_seed": 0,
+  "method_seeds": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9
+  ],
+  "scene": {
+   "dose": 1000
+  },
+  "methods": [
+   {
+    "name": "nmf",
+    "kind": "nmf",
+    "init": "random"
+   },
+   {
+    "name": "vca",
+    "kind": "vca"
+   },
+   {
+    "name": "ae",
+    "kind": "ae",
+    "epochs": 1200
+   }
+  ]
+ },
+ "scene_defaults": {
+  "nx": 64,
+  "ny": 64,
+  "n_channels": 200,
+  "e_min_ev": 380.0,
+  "e_max_ev": 778.0,
+  "dose": 1000.0,
+  "drift_channels": 1.5,
+  "edge_separation_ev": 68.0,
+  "interface_width_px": 4.0,
+  "precipitate_radius_px": 11.0,
+  "n_phases": 3,
+  "seed": 0
+ },
+ "records": [
+  {
+   "method": "nmf",
+   "seed": 0,
+   "reconstruction_error": 2015.74,
+   "seconds": 0.95,
+   "sad_mean_deg": 14.2065,
+   "sad_per_component_deg": {
+    "Ti oxide": 11.4855,
+    "Mn oxide": 17.2325,
+    "Fe oxide": 13.9016
+   },
+   "abundance_rmse": 0.20703,
+   "subspace_error_deg": 31.8355,
+   "n_matched": 3
+  },
+  {
+   "method": "nmf",
+   "seed": 1,
+   "reconstruction_error": 2015.74,
+   "seconds": 0.86,
+   "sad_mean_deg": 15.1773,
+   "sad_per_component_deg": {
+    "Ti oxide": 14.4378,
+    "Mn oxide": 17.5472,
+    "Fe oxide": 13.5469
+   },
+   "abundance_rmse": 0.22704,
+   "subspace_error_deg": 31.8345,
+   "n_matched": 3
+  },
+  {
+   "method": "nmf",
+   "seed": 2,
+   "reconstruction_error": 2015.74,
+   "seconds": 0.88,
+   "sad_mean_deg": 13.5461,
+   "sad_per_component_deg": {
+    "Ti oxide": 9.5615,
+    "Mn oxide": 17.1047,
+    "Fe oxide": 13.9722
+   },
+   "abundance_rmse": 0.19662,
+   "subspace_error_deg": 31.8302,
+   "n_matched": 3
+  },
+  {
+   "method": "nmf",
+   "seed": 3,
+   "reconstruction_error": 2015.74,
+   "seconds": 0.85,
+   "sad_mean_deg": 14.2447,
+   "sad_per_component_deg": {
+    "Ti oxide": 10.6012,
+    "Mn oxide": 18.6221,
+    "Fe oxide": 13.5106
+   },
+   "abundance_rmse": 0.21108,
+   "subspace_error_deg": 31.833,
+   "n_matched": 3
+  },
+  {
+   "method": "nmf",
+   "seed": 4,
+   "reconstruction_error": 2015.74,
+   "seconds": 1.01,
+   "sad_mean_deg": 15.082,
+   "sad_per_component_deg": {
+    "Ti oxide": 10.626,
+    "Mn oxide": 16.1137,
+    "Fe oxide": 18.5064
+   },
+   "abundance_rmse": 0.19467,
+   "subspace_error_deg": 31.835,
+   "n_matched": 3
+  },
+  {
+   "method": "nmf",
+   "seed": 5,
+   "reconstruction_error": 2015.74,
+   "seconds": 0.97,
+   "sad_mean_deg": 15.0705,
+   "sad_per_component_deg": {
+    "Ti oxide": 11.0876,
+    "Mn oxide": 15.6826,
+    "Fe oxide": 18.4412
+   },
+   "abundance_rmse": 0.19435,
+   "subspace_error_deg": 31.8349,
+   "n_matched": 3
+  },
+  {
+   "method": "nmf",
+   "seed": 6,
+   "reconstruction_error": 2015.74,
+   "seconds": 0.87,
+   "sad_mean_deg": 15.1578,
+   "sad_per_component_deg": {
+    "Ti oxide": 14.3794,
+    "Mn oxide": 17.6404,
+    "Fe oxide": 13.4535
+   },
+   "abundance_rmse": 0.22743,
+   "subspace_error_deg": 31.834,
+   "n_matched": 3
+  },
+  {
+   "method": "nmf",
+   "seed": 7,
+   "reconstruction_error": 2015.74,
+   "seconds": 0.17,
+   "sad_mean_deg": 14.6819,
+   "sad_per_component_deg": {
+    "Ti oxide": 14.4732,
+    "Mn oxide": 15.8089,
+    "Fe oxide": 13.7635
+   },
+   "abundance_rmse": 0.20793,
+   "subspace_error_deg": 31.835,
+   "n_matched": 3
+  },
+  {
+   "method": "nmf",
+   "seed": 8,
+   "reconstruction_error": 2015.74,
+   "seconds": 0.9,
+   "sad_mean_deg": 15.7258,
+   "sad_per_component_deg": {
+    "Ti oxide": 11.1115,
+    "Mn oxide": 23.013,
+    "Fe oxide": 13.0528
+   },
+   "abundance_rmse": 0.24425,
+   "subspace_error_deg": 31.8327,
+   "n_matched": 3
+  },
+  {
+   "method": "nmf",
+   "seed": 9,
+   "reconstruction_error": 2015.74,
+   "seconds": 0.89,
+   "sad_mean_deg": 14.3546,
+   "sad_per_component_deg": {
+    "Ti oxide": 11.3664,
+    "Mn oxide": 16.9838,
+    "Fe oxide": 14.7137
+   },
+   "abundance_rmse": 0.20408,
+   "subspace_error_deg": 31.8353,
+   "n_matched": 3
+  },
+  {
+   "method": "vca",
+   "seed": 0,
+   "reconstruction_error": 2778.05,
+   "seconds": 0.09,
+   "sad_mean_deg": 23.4688,
+   "sad_per_component_deg": {
+    "Ti oxide": 22.0744,
+    "Mn oxide": 23.4325,
+    "Fe oxide": 24.8995
+   },
+   "abundance_rmse": 0.09368,
+   "subspace_error_deg": 51.5135,
+   "n_matched": 3
+  },
+  {
+   "method": "vca",
+   "seed": 1,
+   "reconstruction_error": 2934.12,
+   "seconds": 0.09,
+   "sad_mean_deg": 26.2708,
+   "sad_per_component_deg": {
+    "Ti oxide": 23.6742,
+    "Mn oxide": 30.2387,
+    "Fe oxide": 24.8995
+   },
+   "abundance_rmse": 0.10096,
+   "subspace_error_deg": 58.2458,
+   "n_matched": 3
+  },
+  {
+   "method": "vca",
+   "seed": 2,
+   "reconstruction_error": 2934.12,
+   "seconds": 0.09,
+   "sad_mean_deg": 26.2708,
+   "sad_per_component_deg": {
+    "Ti oxide": 23.6742,
+    "Mn oxide": 30.2387,
+    "Fe oxide": 24.8995
+   },
+   "abundance_rmse": 0.10096,
+   "subspace_error_deg": 58.2458,
+   "n_matched": 3
+  },
+  {
+   "method": "vca",
+   "seed": 3,
+   "reconstruction_error": 2835.71,
+   "seconds": 0.09,
+   "sad_mean_deg": 24.0021,
+   "sad_per_component_deg": {
+    "Ti oxide": 23.6742,
+    "Mn oxide": 23.4325,
+    "Fe oxide": 24.8995
+   },
+   "abundance_rmse": 0.09254,
+   "subspace_error_deg": 52.0464,
+   "n_matched": 3
+  },
+  {
+   "method": "vca",
+   "seed": 4,
+   "reconstruction_error": 2835.71,
+   "seconds": 0.09,
+   "sad_mean_deg": 24.0021,
+   "sad_per_component_deg": {
+    "Ti oxide": 23.6742,
+    "Mn oxide": 23.4325,
+    "Fe oxide": 24.8995
+   },
+   "abundance_rmse": 0.09254,
+   "subspace_error_deg": 52.0464,
+   "n_matched": 3
+  },
+  {
+   "method": "vca",
+   "seed": 5,
+   "reconstruction_error": 2903.52,
+   "seconds": 0.11,
+   "sad_mean_deg": 26.9296,
+   "sad_per_component_deg": {
+    "Ti oxide": 23.8661,
+    "Mn oxide": 30.2387,
+    "Fe oxide": 26.6841
+   },
+   "abundance_rmse": 0.0977,
+   "subspace_error_deg": 59.3235,
+   "n_matched": 3
+  },
+  {
+   "method": "vca",
+   "seed": 6,
+   "reconstruction_error": 2903.52,
+   "seconds": 0.11,
+   "sad_mean_deg": 26.9296,
+   "sad_per_component_deg": {
+    "Ti oxide": 23.8661,
+    "Mn oxide": 30.2387,
+    "Fe oxide": 26.6841
+   },
+   "abundance_rmse": 0.0977,
+   "subspace_error_deg": 59.3235,
+   "n_matched": 3
+  },
+  {
+   "method": "vca",
+   "seed": 7,
+   "reconstruction_error": 2934.12,
+   "seconds": 0.09,
+   "sad_mean_deg": 26.2708,
+   "sad_per_component_deg": {
+    "Ti oxide": 23.6742,
+    "Mn oxide": 30.2387,
+    "Fe oxide": 24.8995
+   },
+   "abundance_rmse": 0.10096,
+   "subspace_error_deg": 58.2458,
+   "n_matched": 3
+  },
+  {
+   "method": "vca",
+   "seed": 8,
+   "reconstruction_error": 2934.12,
+   "seconds": 0.09,
+   "sad_mean_deg": 26.2708,
+   "sad_per_component_deg": {
+    "Ti oxide": 23.6742,
+    "Mn oxide": 30.2387,
+    "Fe oxide": 24.8995
+   },
+   "abundance_rmse": 0.10096,
+   "subspace_error_deg": 58.2458,
+   "n_matched": 3
+  },
+  {
+   "method": "vca",
+   "seed": 9,
+   "reconstruction_error": 2934.12,
+   "seconds": 0.09,
+   "sad_mean_deg": 26.2708,
+   "sad_per_component_deg": {
+    "Ti oxide": 23.6742,
+    "Mn oxide": 30.2387,
+    "Fe oxide": 24.8995
+   },
+   "abundance_rmse": 0.10096,
+   "subspace_error_deg": 58.2458,
+   "n_matched": 3
+  },
+  {
+   "method": "ae",
+   "seed": 0,
+   "reconstruction_error": 2026.22,
+   "seconds": 9.28,
+   "sad_mean_deg": 7.5258,
+   "sad_per_component_deg": {
+    "Ti oxide": 4.8281,
+    "Mn oxide": 8.0899,
+    "Fe oxide": 9.6595
+   },
+   "abundance_rmse": 0.0722,
+   "subspace_error_deg": 29.6537,
+   "n_matched": 3
+  },
+  {
+   "method": "ae",
+   "seed": 1,
+   "reconstruction_error": 2026.27,
+   "seconds": 10.11,
+   "sad_mean_deg": 7.5369,
+   "sad_per_component_deg": {
+    "Ti oxide": 4.8696,
+    "Mn oxide": 8.0867,
+    "Fe oxide": 9.6544
+   },
+   "abundance_rmse": 0.07203,
+   "subspace_error_deg": 29.4213,
+   "n_matched": 3
+  },
+  {
+   "method": "ae",
+   "seed": 2,
+   "reconstruction_error": 2030.04,
+   "seconds": 10.3,
+   "sad_mean_deg": 7.5342,
+   "sad_per_component_deg": {
+    "Ti oxide": 4.8626,
+    "Mn oxide": 8.0531,
+    "Fe oxide": 9.687
+   },
+   "abundance_rmse": 0.07133,
+   "subspace_error_deg": 29.5435,
+   "n_matched": 3
+  },
+  {
+   "method": "ae",
+   "seed": 3,
+   "reconstruction_error": 2254.19,
+   "seconds": 10.37,
+   "sad_mean_deg": 16.5762,
+   "sad_per_component_deg": {
+    "Ti oxide": 16.9336,
+    "Mn oxide": 14.0932,
+    "Fe oxide": 18.7018
+   },
+   "abundance_rmse": 0.5664,
+   "subspace_error_deg": 77.7763,
+   "n_matched": 3
+  },
+  {
+   "method": "ae",
+   "seed": 4,
+   "reconstruction_error": 2028.32,
+   "seconds": 10.25,
+   "sad_mean_deg": 7.5157,
+   "sad_per_component_deg": {
+    "Ti oxide": 4.8114,
+    "Mn oxide": 8.1389,
+    "Fe oxide": 9.5968
+   },
+   "abundance_rmse": 0.06968,
+   "subspace_error_deg": 29.3301,
+   "n_matched": 3
+  },
+  {
+   "method": "ae",
+   "seed": 5,
+   "reconstruction_error": 2254.19,
+   "seconds": 10.6,
+   "sad_mean_deg": 17.0121,
+   "sad_per_component_deg": {
+    "Ti oxide": 16.3491,
+    "Mn oxide": 14.0935,
+    "Fe oxide": 20.5939
+   },
+   "abundance_rmse": 0.5664,
+   "subspace_error_deg": 80.4947,
+   "n_matched": 3
+  },
+  {
+   "method": "ae",
+   "seed": 6,
+   "reconstruction_error": 2025.75,
+   "seconds": 11.44,
+   "sad_mean_deg": 7.5951,
+   "sad_per_component_deg": {
+    "Ti oxide": 4.7815,
+    "Mn oxide": 8.3128,
+    "Fe oxide": 9.6911
+   },
+   "abundance_rmse": 0.0706,
+   "subspace_error_deg": 29.8661,
+   "n_matched": 3
+  },
+  {
+   "method": "ae",
+   "seed": 7,
+   "reconstruction_error": 2025.21,
+   "seconds": 10.24,
+   "sad_mean_deg": 7.5656,
+   "sad_per_component_deg": {
+    "Ti oxide": 4.9689,
+    "Mn oxide": 8.1942,
+    "Fe oxide": 9.5336
+   },
+   "abundance_rmse": 0.07652,
+   "subspace_error_deg": 29.8374,
+   "n_matched": 3
+  },
+  {
+   "method": "ae",
+   "seed": 8,
+   "reconstruction_error": 2025.8,
+   "seconds": 9.19,
+   "sad_mean_deg": 7.5532,
+   "sad_per_component_deg": {
+    "Ti oxide": 4.9132,
+    "Mn oxide": 8.1355,
+    "Fe oxide": 9.6111
+   },
+   "abundance_rmse": 0.07277,
+   "subspace_error_deg": 29.6113,
+   "n_matched": 3
+  },
+  {
+   "method": "ae",
+   "seed": 9,
+   "reconstruction_error": 2254.19,
+   "seconds": 10.3,
+   "sad_mean_deg": 16.915,
+   "sad_per_component_deg": {
+    "Ti oxide": 16.1597,
+    "Mn oxide": 14.0943,
+    "Fe oxide": 20.491
+   },
+   "abundance_rmse": 0.5664,
+   "subspace_error_deg": 83.6955,
+   "n_matched": 3
+  }
+ ],
+ "summary": {
+  "nmf": {
+   "sad_mean_deg_mean": 14.7247,
+   "sad_mean_deg_std": 0.6057,
+   "sad_mean_deg_min": 13.5461,
+   "sad_mean_deg_max": 15.7258
+  },
+  "vca": {
+   "sad_mean_deg_mean": 25.6686,
+   "sad_mean_deg_std": 1.2404,
+   "sad_mean_deg_min": 23.4688,
+   "sad_mean_deg_max": 26.9296
+  },
+  "ae": {
+   "sad_mean_deg_mean": 10.333,
+   "sad_mean_deg_std": 4.2575,
+   "sad_mean_deg_min": 7.5157,
+   "sad_mean_deg_max": 17.0121
+  }
+ }
+}

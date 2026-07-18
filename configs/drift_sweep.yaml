@@ -1,0 +1,16 @@
+# Energy-drift sweep: peak-to-peak spectrometer drift from 0 to 8 channels
+# (0 to 16 eV at 2 eV/channel). Drift breaks the strict linear mixing model,
+# so it stresses every factorization's core assumption.
+name: drift_sweep
+mode: sweep
+sweep:
+  parameter: drift_channels
+  values: [0.0, 1.0, 2.0, 4.0, 8.0]
+seeds: [0, 1, 2]
+scene:
+  dose: 1000
+methods:
+  - { name: pca, kind: pca }
+  - { name: nmf, kind: nmf, init: nndsvda }
+  - { name: vca, kind: vca }
+  - { name: ae, kind: ae, epochs: 1200 }

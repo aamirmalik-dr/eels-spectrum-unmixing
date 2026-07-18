@@ -1,0 +1,13 @@
+# Seed stability on one fixed scene: NMF from random initializations, VCA's
+# random projections, and the autoencoder's random weights, 10 seeds each.
+# (The deterministic nndsvda NMF run appears in operating_point.yaml.)
+name: stability
+mode: stability
+scene_seed: 0
+method_seeds: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+scene:
+  dose: 1000
+methods:
+  - { name: nmf, kind: nmf, init: random }
+  - { name: vca, kind: vca }
+  - { name: ae, kind: ae, epochs: 1200 }

@@ -1,0 +1,17 @@
+# Headline operating point: dose 200 counts per spectrum (photon-limited but
+# realistic for core-loss mapping), default drift and overlap, three scene
+# seeds. Includes matched-effort variants: NMF best-of-10 restarts and the
+# autoencoder best-of-5 seeds, both selected by fit error only (no ground
+# truth), so the single-run and selection-effort comparisons are both fair.
+name: operating_point
+mode: operating_point
+seeds: [0, 1, 2]
+scene:
+  dose: 200
+methods:
+  - { name: pca, kind: pca }
+  - { name: nmf, kind: nmf, init: nndsvda }
+  - { name: nmf_best10, kind: nmf, n_restarts: 10 }
+  - { name: vca, kind: vca }
+  - { name: ae, kind: ae, epochs: 1200 }
+  - { name: ae_best5, kind: ae, epochs: 1200, n_seeds: 5 }

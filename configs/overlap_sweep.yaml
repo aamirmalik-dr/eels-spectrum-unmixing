@@ -1,0 +1,16 @@
+# Spectral-overlap sweep: the Fe L3 onset is moved toward the Mn L3 onset
+# (physical separation 68 eV) until the two metal-oxide endmembers become
+# nearly collinear. All three phases already share the O K edge.
+name: overlap_sweep
+mode: sweep
+sweep:
+  parameter: edge_separation_ev
+  values: [68.0, 40.0, 25.0, 15.0, 8.0]
+seeds: [0, 1, 2]
+scene:
+  dose: 1000
+methods:
+  - { name: pca, kind: pca }
+  - { name: nmf, kind: nmf, init: nndsvda }
+  - { name: vca, kind: vca }
+  - { name: ae, kind: ae, epochs: 1200 }

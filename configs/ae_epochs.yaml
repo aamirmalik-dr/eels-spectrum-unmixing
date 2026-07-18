@@ -1,0 +1,17 @@
+# Autoencoder training-length ablation at the headline dose (200 counts).
+# Reconstruction error keeps falling with longer training, but endmember
+# recovery does not have to follow it; this config measures both across
+# three seeds per setting so the epoch choice is an audited decision, not
+# a hidden tuning knob.
+name: ae_epochs
+mode: stability
+scene_seed: 0
+method_seeds: [0, 1, 2]
+scene:
+  dose: 200
+methods:
+  - { name: ae300, kind: ae, epochs: 300 }
+  - { name: ae600, kind: ae, epochs: 600 }
+  - { name: ae1200, kind: ae, epochs: 1200 }
+  - { name: ae2400, kind: ae, epochs: 2400 }
+  - { name: ae4800, kind: ae, epochs: 4800 }

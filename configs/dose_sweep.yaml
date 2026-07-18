@@ -1,0 +1,15 @@
+# Dose sweep: endmember and abundance recovery versus counts per spectrum.
+# Poisson-limited acquisition is the central constraint of core-loss mapping;
+# this sweep spans starved (10 counts/px) to comfortable (5000 counts/px).
+name: dose_sweep
+mode: sweep
+sweep:
+  parameter: dose
+  values: [10, 50, 200, 1000, 5000]
+seeds: [0, 1, 2]
+scene: {}
+methods:
+  - { name: pca, kind: pca }
+  - { name: nmf, kind: nmf, init: nndsvda }
+  - { name: vca, kind: vca }
+  - { name: ae, kind: ae, epochs: 1200 }

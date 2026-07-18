@@ -1,0 +1,25 @@
+# environments and caches
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+build/
+dist/
+
+# large or local data: the committed sample in data/sample/ is tracked explicitly
+data/full/
+data/real/
+*.dm3
+*.dm4
+*.hspy
+
+# notebook checkpoints and scratch figures (embedded in the executed notebook)
+.ipynb_checkpoints/
+notebooks/nb_figs/
+
+# OS noise
+Thumbs.db
+.DS_Store
