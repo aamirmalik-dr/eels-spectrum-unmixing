@@ -1,5 +1,7 @@
 # eels-spectrum-unmixing
 
+*Origin: Originally developed during the 4th Summer School on ML/AI for Electron Microscopy (June 2026); refactored and open-sourced in July 2026.*
+
 A ground-truth benchmark for spectral unmixing of STEM-EELS spectrum images.
 It simulates a three-phase oxide scene (Ti, Mn, and Fe oxides meeting at a
 diffuse interface, all sharing the O K edge) with exact known endmembers and
