@@ -198,14 +198,29 @@ autoencoder's most important honest caveat.
 ## Was the classical baseline fairly tuned?
 
 `scripts/fair_tuning_check.py`, `results/fair_tuning.json`. Checks run
-before crediting the autoencoder's win:
+before crediting the autoencoder's win, all on the seed-0 scenes:
 
-- NMF converges before its iteration cap (818 iterations at dose 200, 444
-  at dose 1000, cap 1000); raising the cap to 4000 changes nothing.
+- The headline nndsvda NMF runs converge before the iteration cap (818
+  iterations at dose 200, 444 at dose 1000, cap 1000); raising the cap to
+  4000 changes nothing. Random-init restart runs inside the best-of-10
+  variant can hit the cap (sklearn warns about it), but rerunning all 10
+  restarts with a 4x cap leaves the selected run's score unchanged to two
+  decimals on every scene seed, so nothing was left unconverged that
+  selection could have used.
 - The Poisson-motivated alternative, KL-divergence NMF with multiplicative
   updates, is worse on both doses (19.9 vs 17.8 deg at dose 200, 16.8 vs
   14.3 at dose 1000), so the Frobenius default is the stronger baseline
   and is the one benchmarked.
+- Poisson noise-whitening (scale each channel by 1/sqrt of its mean count,
+  fit, un-scale the endmembers; this preserves the linear mixing model
+  exactly) does not close the gap either: 18.9 vs 17.8 deg at dose 200,
+  14.8 vs 14.3 at dose 1000, abundance RMSE within 0.01 both ways. The
+  autoencoder's margin is not an artifact of NMF's unweighted loss.
+- Handing NMF the autoencoder's sum-to-one constraint through the standard
+  augmented-column device never helps: neutral at a weak constraint weight
+  (17.9 deg at 20x the mean count) and harmful at a strong one (20.3 deg,
+  RMSE 0.33, still unconverged at 4000 iterations, at 100x). The win is
+  not "NMF denied a constraint".
 - Random restarts do not help NMF (operating-point table), so the
   deterministic nndsvda run is not a lucky draw.
 - VCA is given the standard SNR-dependent projection and simplex-constrained
