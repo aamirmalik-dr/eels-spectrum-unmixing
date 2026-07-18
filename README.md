@@ -55,8 +55,10 @@ Five findings, measured, not asserted:
 
 The classical baseline was audited before crediting any of this: NMF
 converges below its iteration cap, a 4x cap changes nothing, KL-divergence
-NMF is worse than the Frobenius default on this problem, and restarts do not
-help (`scripts/fair_tuning_check.py`, `results/fair_tuning.json`).
+NMF is worse than the Frobenius default on this problem, restarts do not
+help, and neither Poisson noise-whitening nor bolting the sum-to-one
+constraint onto NMF closes the gap (`scripts/fair_tuning_check.py`,
+`results/fair_tuning.json`).
 
 ## What is in the box
 
@@ -133,7 +135,7 @@ data/sample/        one committed synthetic sample with full ground truth
 notebooks/          executed tutorial notebook
 docs/, examples/    API documentation, bring-your-own-data recipe
 scripts/            run_all, make_figures, build_notebook, fair_tuning_check
-tests/              58 pytest tests
+tests/              59 pytest tests
 ```
 
 ## Scope and limitations
