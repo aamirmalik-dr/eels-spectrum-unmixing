@@ -1,5 +1,7 @@
 # eels-spectrum-unmixing
 
+[![ci](https://github.com/aamirmalik-dr/eels-spectrum-unmixing/actions/workflows/ci.yml/badge.svg)](https://github.com/aamirmalik-dr/eels-spectrum-unmixing/actions/workflows/ci.yml)
+
 A ground-truth benchmark for spectral unmixing of STEM-EELS spectrum images.
 It simulates a three-phase oxide scene (Ti, Mn, and Fe oxides meeting at a
 diffuse interface, all sharing the O K edge) with exact known endmembers and
