@@ -27,7 +27,7 @@ from .metrics import (
 )
 from .sim import EELSScene, SimConfig, oxide_phase_specs, render_endmember, simulate
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 
 __all__ = [
     "AETrainConfig",

@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "eelsunmix"
-version = "0.1.0"
+version = "0.1.1"
 description = "Spectral unmixing benchmark for simulated STEM-EELS spectrum images: physics-motivated simulator with exact ground truth, PCA/NMF/VCA baselines, a constrained unmixing autoencoder, and a config-driven benchmark harness"
 readme = "README.md"
 requires-python = ">=3.10"

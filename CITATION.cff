@@ -5,8 +5,8 @@ type: software
 authors:
   - family-names: Malik
     given-names: Aamir
-version: 0.1.0
-date-released: "2026-07-18"
+version: 0.1.1
+date-released: "2026-09-26"
 license: MIT
 repository-code: "https://github.com/aamirmalik-dr/eels-spectrum-unmixing"
 keywords:

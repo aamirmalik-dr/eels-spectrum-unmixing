@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 0.1.1 (2026-09-26)
 
 - Package metadata completed: keywords, classifiers, and project URLs in `pyproject.toml`.
 - Citation file (`CITATION.cff`) and this changelog added.
