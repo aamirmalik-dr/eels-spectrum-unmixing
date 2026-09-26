@@ -10,6 +10,19 @@ readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "MIT" }
 authors = [{ name = "Aamir Malik" }]
+keywords = ["EELS", "spectrum imaging", "spectral unmixing", "hyperspectral", "NMF", "PCA", "VCA", "autoencoder", "electron microscopy", "benchmark", "PyTorch"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Physics",
+    "Topic :: Scientific/Engineering :: Chemistry",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
 dependencies = [
     "numpy>=1.24",
     "scipy>=1.10",
@@ -28,6 +41,12 @@ dev = [
     "nbformat>=5.9",
     "ipykernel>=6.25",
 ]
+
+[project.urls]
+Repository = "https://github.com/aamirmalik-dr/eels-spectrum-unmixing"
+Issues = "https://github.com/aamirmalik-dr/eels-spectrum-unmixing/issues"
+Results = "https://github.com/aamirmalik-dr/eels-spectrum-unmixing/blob/main/RESULTS.md"
+Changelog = "https://github.com/aamirmalik-dr/eels-spectrum-unmixing/blob/main/CHANGELOG.md"
 
 [project.scripts]
 eelsunmix = "eelsunmix.cli:main"
