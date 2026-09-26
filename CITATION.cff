@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this code, data, or benchmark results, please cite the repository."
+title: "eels-spectrum-unmixing: spectral unmixing benchmark for simulated STEM-EELS spectrum images"
+type: software
+authors:
+  - family-names: Malik
+    given-names: Aamir
+version: 0.1.0
+date-released: "2026-07-18"
+license: MIT
+repository-code: "https://github.com/aamirmalik-dr/eels-spectrum-unmixing"
+keywords:
+  - EELS
+  - spectral unmixing
+  - NMF
+  - autoencoder
+  - electron microscopy
+  - benchmark
+  - PyTorch
